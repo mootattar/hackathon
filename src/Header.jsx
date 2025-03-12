@@ -23,25 +23,25 @@ export default function Header() {
             href="#"
             className="text-gray-700 hover:text-indigo-600 font-medium"
           >
-            Home
+            الرئيسية
           </a>
           <a
             href="#"
             className="text-gray-700 hover:text-indigo-600 font-medium"
           >
-            About
+            حولنا
           </a>
           <a
             href="#"
             className="text-gray-700 hover:text-indigo-600 font-medium"
           >
-            How It Works
+            طريقة العمل
           </a>
           <a
             href="#"
             className="text-gray-700 hover:text-indigo-600 font-medium"
           >
-            Contact
+            تواصل معنا{" "}
           </a>
         </nav>
 
@@ -63,25 +63,25 @@ export default function Header() {
               href="#"
               className="text-gray-700 hover:text-indigo-600 font-medium py-2"
             >
-              Home
+              الرئيسية
             </a>
             <a
               href="#"
               className="text-gray-700 hover:text-indigo-600 font-medium py-2"
             >
-              About
+              حولنا{" "}
             </a>
             <a
               href="#"
               className="text-gray-700 hover:text-indigo-600 font-medium py-2"
             >
-              How It Works
+              طريقة العمل{" "}
             </a>
             <a
               href="#"
               className="text-gray-700 hover:text-indigo-600 font-medium py-2"
             >
-              Contact
+              تواصل معنا{" "}
             </a>
           </nav>
         </div>

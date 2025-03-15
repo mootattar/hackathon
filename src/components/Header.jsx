@@ -1,5 +1,6 @@
 import { BrainCircuit, Menu, X } from "lucide-react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -7,42 +8,43 @@ export default function Header() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
   return (
     <header className="bg-white shadow">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <BrainCircuit className="w-8 h-8 text-indigo-600" />
-          <h1 className="text-xl md:text-2xl font-bold text-gray-900">
-            EduBot Central
-          </h1>
-        </div>
+      <div className="container mx-auto px-8 py-4 flex justify-between items-center">
+        <Link to="/" className="text-xl md:text-2xl font-bold text-gray-900">
+          <div className="flex items-center gap-4">
+            <BrainCircuit className="w-8 h-8 text-indigo-600" />
+            <span>المساعد الأكاديمي الذكي</span>
+          </div>
+        </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
-          <a
-            href="#"
+        <nav className="hidden md:flex md:flex-row-reverse gap-4 mr-4">
+          <Link
+            to="/"
             className="text-gray-700 hover:text-indigo-600 font-medium"
           >
             الرئيسية
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/about"
             className="text-gray-700 hover:text-indigo-600 font-medium"
           >
             حولنا
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/how-it-works"
             className="text-gray-700 hover:text-indigo-600 font-medium"
           >
             طريقة العمل
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/contact"
             className="text-gray-700 hover:text-indigo-600 font-medium"
           >
-            تواصل معنا{" "}
-          </a>
+            تواصل معنا
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -59,30 +61,30 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white px-4 py-2 shadow-md">
           <nav className="flex flex-col space-y-2 pb-3">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-gray-700 hover:text-indigo-600 font-medium py-2"
             >
               الرئيسية
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/about"
               className="text-gray-700 hover:text-indigo-600 font-medium py-2"
             >
-              حولنا{" "}
-            </a>
-            <a
-              href="#"
+              حولنا
+            </Link>
+            <Link
+              to="/how-it-works"
               className="text-gray-700 hover:text-indigo-600 font-medium py-2"
             >
-              طريقة العمل{" "}
-            </a>
-            <a
-              href="#"
+              طريقة العمل
+            </Link>
+            <Link
+              to="/contact"
               className="text-gray-700 hover:text-indigo-600 font-medium py-2"
             >
-              تواصل معنا{" "}
-            </a>
+              تواصل معنا
+            </Link>
           </nav>
         </div>
       )}

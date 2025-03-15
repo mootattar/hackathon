@@ -8,9 +8,9 @@ import {
   Users,
 } from "lucide-react";
 
-export default function Hero() {
+export default function Home() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container px-4 py-8">
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-white mb-8">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">المساعد الأكاديمي الذكي</h1>
